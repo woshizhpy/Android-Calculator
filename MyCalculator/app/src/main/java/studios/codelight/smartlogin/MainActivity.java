@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements SmartLoginCallbac
             logoutButton.setVisibility(View.GONE);
             calculatorRes.setVisibility(View.GONE);
             calculator.setVisibility(View.GONE);
-//            calculatorTableLayout.setVisibility(View.GONE);
+
         }
     }
 
@@ -490,7 +490,6 @@ public class MainActivity extends AppCompatActivity implements SmartLoginCallbac
                         }
 
                         if ((existedText.substring(existedText.length() - 1)).equals("+")) {
-//                    Log.d("Anonymous", "onClick: " + "进入减法方法");
                             existedText = existedText.replace("+", "-");
                         } else if ((existedText.substring(existedText.length() - 1)).equals("×")) {
                             existedText = existedText.replace("×", "-");
@@ -568,7 +567,6 @@ public class MainActivity extends AppCompatActivity implements SmartLoginCallbac
                 break;
             case R.id.equal_btn:
 
-//                existedText=String.valueOf(Math.sin(getResult2()/180f*Math.PI));
                 existedText=getResult();
                 isCounted = true;
                 break;
@@ -807,14 +805,13 @@ public class MainActivity extends AppCompatActivity implements SmartLoginCallbac
 
                 if (param2.equals("")){
                     result=Double.parseDouble(existedText);
-//                    tempResult = existedText;
+
                 } else {
 
                     arg1 = Double.parseDouble(param1);
                     arg2 = Double.parseDouble(param2);
                     result = arg1 + arg2;
-//                    tempResult = String.format("%f", result);
-//                    tempResult = subZeroAndDot(tempResult);
+
                 }
 
 
@@ -824,7 +821,7 @@ public class MainActivity extends AppCompatActivity implements SmartLoginCallbac
                 param2 = existedText.substring(existedText.indexOf("×") + 1);
 
                 if (param2.equals("")){
-//                    tempResult = existedText;
+
                     result=Double.parseDouble(existedText);
                 } else {
                     arg1 = Double.parseDouble(param1);
@@ -842,7 +839,7 @@ public class MainActivity extends AppCompatActivity implements SmartLoginCallbac
                 if (param2.equals("0")){
                     tempResult = "error";
                 } else if (param2.equals("")){
-//                    tempResult = existedText;
+
                     result=Double.parseDouble(existedText);
                 } else {
                     arg1 = Double.parseDouble(param1);
@@ -858,14 +855,13 @@ public class MainActivity extends AppCompatActivity implements SmartLoginCallbac
                 param2 = existedText.substring(existedText.lastIndexOf("-") + 1);
 
                 if (param2.equals("")){
-//                    tempResult = existedText;
+
                     result=Double.parseDouble(existedText);
                 } else {
                     arg1 = Double.parseDouble(param1);
                     arg2 = Double.parseDouble(param2);
                     result = arg1 - arg2;
-//                    tempResult = String.format("%f", result);
-//                    tempResult = subZeroAndDot(tempResult);
+
                 }
 
             }
